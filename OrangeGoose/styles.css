@@ -1,0 +1,386 @@
+/* styles.css */
+
+/* Reset box-sizing to border-box for all elements */
+* {
+    box-sizing: border-box; /* Ensures that padding and border are included in the element's total width and height */
+}
+
+/* Body styles */
+body {
+    margin: 0; /* Sets the margin of the body to 0, removing any default margin */
+    background: radial-gradient(circle at center, rgba(255, 120, 0, 1) 10%, rgba(255, 255, 255, 1) 50%);
+background-attachment: fixed;
+    font-family: 'Seymour One', sans-serif; /* Applies the 'Seymour One' font to the body text with a fallback to sans-serif */
+}
+
+/* Header styles */
+header {
+
+	background-color: #ffffff;
+   
+ /* Sets the background color of the header */
+    padding: 10px; /* Adds padding to the header */
+    width: 100%; /* Makes the header span the full width of its container */
+    border-radius: 0 0 50% 50%; /* Applies a border-radius to create a semi-ellipse shape at the bottom of the header */
+    height: 80px; /* Sets the height of the header */
+    position: relative; /* Sets the positioning context for child elements */
+    z-index: 1; /* Sets the stacking order of the header */
+border: 2px;
+color: #c1fffe;
+border-bottom: 5px solid rgb(255, 115, 0);
+box-shadow: inset 0 0 50px rgba(255, 238, 190, 0.95);
+margin-bottom: 10px;
+
+}
+
+
+
+/* Navigation styles */
+nav {
+    display: flex; /* Enables flexbox layout for the navigation container */
+    justify-content: center; /* Centers the navigation items horizontally */
+    align-items: center;
+     /* Centers the navigation items vertically */
+}
+
+/* Unordered list styles */
+ul {
+    display: flex; /* Enables flexbox layout for the list container */
+    list-style: none; /* Removes default list styling (bullets) */
+    margin: 0; /* Sets margin to 0 to remove default spacing */
+    padding: 0; /* Sets padding to 0 to remove default spacing */
+}
+
+/* List item styles */
+li {
+    margin: 0 15px; /* Adds margin to list items for spacing */
+    color: #fffff6; /* Sets the text color of list items */
+    font-weight: bold; /* Sets the font weight to bold for list items */
+    cursor: pointer; /* Changes cursor to pointer for interactive feedback */
+	background: radial-gradient(rgba(67, 172, 255, 0.3) 50%, rgba(238, 255, 254, 0.8) 80%);
+padding: 10px;;
+border-radius: 100px;
+font-size: 10px;
+}
+
+h2 {
+    color:#fffff6;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+/* Welcome section styles */
+#welcome {
+    position: fixed; /* Fixes the welcome section to the viewport */
+    top: 0; /* Sets the distance from the top of the viewport to 0 */
+    left: 0; /* Sets the distance from the left of the viewport to 0 */
+    width: 100%; /* Makes the welcome section span the full width of the viewport */
+    height: 100vh; /* Sets the height of the welcome section to 100% of the viewport height */
+    display: flex; /* Enables flexbox layout for the welcome container */
+    flex-direction: column; /* Arranges children in a column layout */
+    align-items: center; /* Centers children horizontally */
+    justify-content: center; /* Centers children vertically */
+    overflow: hidden; /* Hides content that exceeds the dimensions of the container */
+    animation: juiceLower 4s ease-in-out 6s forwards, juiceAnimation 3s ease-in-out infinite alternate, hideJuice 0s linear 11s forwards; /* Applies animations to the welcome section */
+    z-index: 0; /* Sets the stacking order of the welcome section */
+}
+
+h1, #welcome p {
+    text-align: center; /* Centers text horizontally within its container */
+    color: #fffff6; /* Sets the text color for h1 and p elements */
+    animation: textAnimation 6s ease-in forwards; /* Applies animation to text elements */
+}
+
+/* Flex container styles */
+.flex-container {
+    display: flex; /* Enables flexbox layout for the container */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if there's not enough space */
+    justify-content: space-around; /* Distributes items evenly with space around them */
+    color: #f9c81b; /* Sets the text color for items in the flex container */
+}
+
+/* Special offers section styles */
+.special-offers {
+    width: 100%; /* Makes the special offers section span the full width of its container */
+    text-align: center; /* Centers text horizontally within its container */
+    margin-bottom: 20px; /* Adds margin to the bottom of the special offers section */
+}
+
+/* Product box styles */
+.product-box {
+    width: 300px; /* Set a fixed width for the product boxes */
+    margin: 20px; /* Adds margin around product boxes for spacing */
+    padding: 10px; /* Adds padding inside product boxes */
+    border: 1px solid rgb(255, 120, 0); /* Sets a border for product boxes */
+    border-radius: 10px; /* Rounds the corners of product boxes */
+    display: flex; /* Enables flexbox layout for product boxes */
+    flex-direction: column; /* Arranges children in a column layout */
+    align-items: center; /* Centers children horizontally */
+    background-color: #2280e6;
+background: radial-gradient(circle at center, rgba(255, 120, 0, 1)20%, rgba(255, 202, 18, 0.6) 80%);
+box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+
+/* Product image styles */
+.product-box img {
+    width: auto; /* Makes product images span the full width of their container */
+    max-width: 100%; /* Ensures images do not exceed their natural width */
+    height: auto; /* Maintains the aspect ratio of the images */
+    max-height: 200px; /* Sets the maximum height of product images */
+    object-fit:fill; /* Scales and centers the product image within its container, maintaining aspect ratio */
+    border-radius: 50px; /* Rounds the corners of product images */
+}
+
+iframe {
+    border-radius: 50px;
+    border: 10px solid #ffa301;
+}
+
+
+
+/* Introduction paragraph styles */
+.intro-paragraph {
+    background-color: #FF7800; /* Blue background with low opacity */
+    padding: 20px; /* Adds padding inside the introduction paragraph */
+    border-radius: 50px; /* Rounds the corners of the introduction paragraph */
+    margin: 20px; /* Adds margin around the introduction paragraph for spacing */
+    font-size: 14px; /* Sets the font size of the introduction paragraph */
+    line-height: 1.5; /* Sets the line height of the introduction paragraph */
+    color: #fffff6; /* Orange text color for the introduction paragraph */
+    text-align: center; /* Centers text horizontally within the introduction paragraph */
+    font-weight: lighter;
+    box-shadow: inset 0 0 80px rgba(249, 254, 255, 1), 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Description styles */
+.description {
+    margin-top: 10px; /* Adds margin to the top of descriptions for spacing */
+    text-align: center; /* Centers text horizontally within descriptions */
+    font-weight: bold;
+}
+
+.description p {
+    color: #fffff6;
+    font-weight: lighter;
+}
+
+/* Additional content styles */
+.additional-content {
+    width: 100%; /* Makes additional content span the full width of its container */
+    margin-top: 20px; /* Adds margin to the top of additional content for spacing */
+    text-align: center; /* Centers text horizontally within additional content */
+}
+
+button {
+    background-color:#ffa301;
+    border-radius: 20px;
+    line-height: 1.5;
+    border: none;
+    color:#fffff6;
+    padding:10px;
+    font-size: 15px;;
+    font-weight: bolder;
+}
+
+
+.car {
+    display: flex;
+    justify-content: center;
+}
+
+.car:hover {
+    animation: carMove 20s forwards ease-in;
+}
+
+.who-are-we {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 0.8 opacity */
+    padding: 20px; /* Adds padding inside the section */
+    border: 2px solid #000; /* Adds a black border with 2px thickness */
+    border-radius: 10px; /* Rounds the corners of the section */
+    margin: 20px; /* Adds margin around the section for spacing */
+    overflow: hidden; /* Hides content that exceeds the dimensions of the container */
+}
+
+.who-are-we h3 {
+    text-align: center; /* Centers the text horizontally within the h3 element */
+}
+
+.who-are-we .content {
+    display: flex; /* Enables flexbox layout for the content */
+    flex-direction: row; /* Arranges children in a row layout (default is row) */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+
+.who-are-we img {
+    max-width: 100%; /* Ensures the image does not exceed its container width */
+    border-radius: 5px; /* Rounds the corners of the image */
+    margin-left: -30px;
+/* Adds margin to the right of the image for spacing */
+}
+
+.who-are-we p {
+ width: 500px;/* Removes default margin for the paragraph */
+ margin-left:0;
+ 
+}
+
+
+
+.where-do-we-come-from {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 0.8 opacity */
+    padding: 20px; /* Adds padding inside the section */
+    border: 2px solid #000; /* Adds a black border with 2px thickness */
+    border-radius: 10px; /* Rounds the corners of the section */
+    margin: 20px; /* Adds margin around the section for spacing */
+    overflow: hidden; /* Hides content that exceeds the dimensions of the container */
+}
+
+
+.where-do-we-come-from .content {
+    display: flex; /* Enables flexbox layout for the content */
+    flex-direction: column; /* Arranges children in a row layout (default is row) */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+
+.where-do-we-come-from p {
+ width: 500px;/* Removes default margin for the paragraph */
+ margin-left:30px;
+}
+
+
+.where-are-we-going {
+    background-color: rgba(255, 255, 255, 0.5); /* White background with 0.8 opacity */
+    padding: 20px; /* Adds padding inside the section */
+    border: 2px solid #000; /* Adds a black border with 2px thickness */
+    border-radius: 10px; /* Rounds the corners of the section */
+    margin: 20px; /* Adds margin around the section for spacing */
+    overflow: hidden; /* Hides content that exceeds the dimensions of the container */
+}
+
+.where-are-we-going h3 {
+    text-align: center; /* Centers the text horizontally within the h3 element */
+}
+
+.where-are-we-going .content {
+    display: flex; /* Enables flexbox layout for the content */
+    flex-direction: column; /* Arranges children in a row layout (default is row) */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+
+.where-are-we-going img {
+    max-width: 100%; /* Ensures the image does not exceed its container width */
+    border-radius: 5px; /* Rounds the corners of the image */
+/* Adds margin to the right of the image for spacing */
+}
+
+.where-are-we-going p {
+ width: 500px;/* Removes default margin for the paragraph */
+ margin-left:0;
+}
+
+.intro-paragraph {
+    background-color: #FF7800;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fffff6;
+    text-align: center;
+    font-weight: lighter;
+    box-shadow: inset 0 0 80px rgba(249, 254, 255, 1), 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Description styles */
+.description {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.description p {
+    color: #fffff6;
+    font-weight: lighter;
+}
+
+/* Paragraphs within sections */
+.who-are-we p,
+.where-do-we-come-from p,
+.where-are-we-going p {
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    color: #fffff6;
+    font-weight: lighter;
+}
+
+.who-are-we,
+.where-do-we-come-from,
+.where-are-we-going {
+background: radial-gradient(circle at center, rgba(255, 120, 0, 0.5) 20%, rgba(255, 202, 18, 0.5) 80%);
+border: 1px solid rgb(255, 120, 0); /* Sets a border for product boxes */
+    border-radius: 10px; /* Rounds the corners of product boxes */
+
+}
+
+form {
+display: flex;
+flex-direction: column;
+margin: 50px;
+}
+#car {
+position:relative;
+}
+
+
+/* Animation keyframes for juice animation */
+@keyframes juiceAnimation {
+    0% { background: rgba(255, 126, 14, 0.97); } 
+    100% { background:rgba(255, 149, 10, 0.97); } /* Final background color for juice animation */
+}
+
+/* Animation keyframes for text animation */
+@keyframes textAnimation {
+    0% { opacity: 1; } /* Initial opacity for text animation */
+    100% { opacity: 0; } /* Final opacity for text animation */
+}
+
+/* Animation keyframes for lowering the juice */
+@keyframes juiceLower {
+    0% {
+        transform: translateY(0); /* Initial translation for lowering the juice */
+    }
+    100% {
+        transform: translateY(100vh); /* Final translation for lowering the juice */
+    }
+}
+
+/* Animation keyframes for hiding the juice */
+@keyframes hideJuice {
+    to {
+        opacity: 0; /* Final opacity for hiding the juice */
+    }
+}
+
+/* Animation keyframes for rotating the orange */
+@keyframes rotateOrange {
+    to {
+        transform: rotate(360deg); /* Correct syntax for rotation transformation */
+    }
+}
+
+@keyframes carMove {
+    to {
+        margin-left: 110000px;
+    }
+}
+/* Apply rotateOrange animation on hover for the element with the class "orange" */
+.orange:hover {
+    background: none;
+    animation: rotateOrange 2s forwards linear infinite;
+}

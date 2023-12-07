@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Orange Goose Juice</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li>Our Story</li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./Cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="intro-paragraph">
+        <h3>Who Are We?</h3>
+    </div>
+
+    <section class="who-are-we">
+        <div class="content">
+            <div><img src="./orange-clipart-cartoon.png" class="orange" /></div>
+            <div><p>Enter the world of Orange Goose Juice, a company born from the fusion of innovation and refreshment. We take pride in crafting beverages that challenge conventions and introduce a touch of intrigue to your daily routine. At Orange Goose Juice, we see ourselves as creators of a liquid experience that goes beyond the ordinary. Our identity is rooted in the art of blending flavors that surprise and captivate, offering a departure from the expected without sacrificing the essence of refreshment.</p></div>
+        </div>
+    </section>
+
+    <div class="intro-paragraph">
+        <h3>Where Do We Come From?</h3>
+    </div>
+
+    <section class="where-do-we-come-from">
+        <div class="content">
+            <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109004.1307675544!2d4.762036345777353!3d44.116124214760006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b590b375eebce1%3A0xad1d8ad5844581fa!2s84100%20Orange%2C%20France!5e0!3m2!1sen!2sie!4v1701853644861!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+            <div><p>Our story begins in the heart of fertile groves, where sun-soaked oranges find their purpose in creating something extraordinary. Orange Goose Juice is a product of craftsmanship and a commitment to extracting the pure essence of citrus goodness. Sourced from orchards known for their dedication to quality, our journey begins with the careful selection of fruit that embodies the spirit of our brand. With an emphasis on quality and an inventive twist, we transform nature's bounty into a beverage that defies convention.</p></div>
+        </div>
+    </section>
+
+    <div class="intro-paragraph">
+        <h3>Where Are We Going?</h3>
+    </div>
+
+    <section class="where-are-we-going">
+        <div class="content">
+            <div><p>The road ahead for Orange Goose Juice is paved with exploration and a commitment to redefining the boundaries of taste. As we move forward, our focus is on continually pushing the envelope of flavor profiles and introducing beverages that challenge the status quo. Our trajectory is one of evolution, embracing new ideas and unexpected combinations. At Orange Goose Juice, we're not just offering a drink; we're embarking on a culinary adventure. Join us as we navigate uncharted territories, introducing you to flavors that linger on your palate and challenge your perception of what a beverage can be. The journey is exciting, and the possibilities are limitless.</p></div>
+	     
+        </div>
+	<div><img src="./orange-fruit-car-260nw-1098022598.jpg" id='car' /></div>
+    </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#car").click(function(){
+            // Move the car to the right
+            $("#car").animate({left: '+=1200px'}, 'slow', function() {
+                // Animation complete, move the car back to its original position
+                $("#car").css({left: '-250px'});
+                
+                // Animation complete, move the car back to the right after coming back to its original position
+                $("#car").animate({left: '+=250px'}, 'slow');
+            });
+        });
+    });
+</script>
+
+<audio id="clickSound">
+  <source src="./straw-slurp-7066.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Define the click sound element
+    var clickSound = $("#clickSound")[0];
+
+    // Attach a click event to the document
+    $(document).click(function(){
+      // Play the click sound
+      clickSound.play();
+    });
+  });
+</script>
+
+    
+</body>
+</html>

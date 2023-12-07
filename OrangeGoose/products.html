@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Orange Goose Juice</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li>Products</li>
+                <li><a href="./story.html">Our Story</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <li><a href="./Cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <p class="intro-paragraph">
+           Discover a range of Our Products!!!
+        </p>
+    </div>
+
+    <div class="flex-container"> <!-- New container for flex boxes -->
+        
+        <div class="flex-container"> <!-- Main flex container -->
+            <div class="product-box" id="in-cup">
+                <img src="https://images.creativemarket.com/0.1.0/ps/6060971/1820/2730/m1/fpnw/wm1/qcdpmm5cfnlh1124gwnh0i6fmc0xtaa8epavtqaalgnhhxgcdvctqzgoo6yn15vo-.jpg?1552511804&s=4737547c4f3287e4552d1397af26e319" alt="Product Image 1">
+                <div class="description">
+                    <h3>Orange Goose in a Plastic Cup</h3>
+                    <p>Description of Product 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <button class="buy-now-btn" data-product="Orange Goose in a Plastic Cup">Buy Now!</button>
+            </div>
+    
+            <div class="product-box" id="martini">
+                <img src="https://th.bing.com/th/id/OIP.l_7EGGdCPv6P3WkdTDXiwAHaEo?rs=1&pid=ImgDetMain" alt="Product Image 1">
+                <div class="description">
+                    <h3>Orange Goose Martini</h3>
+                    <p>Description of Product 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <button class="buy-now-btn" data-product="Orange Goose Martini">Buy Now!</button>
+            </div>
+
+            <div class="product-box" id="in-can">
+                <img src="https://thumbs.dreamstime.com/b/yellow-aluminum-beverage-can-can-beverage-aluminum-can-cold-beverage-cold-drink-isolated-white-drink-109029091.jpg" alt="Product Image 1">
+                <div class="description">
+                    <h3>Orange Goose in a Can</h3>
+                    <p>Description of Product 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <button class="buy-now-btn" data-product="Orange Goose in a Can">Buy Now!</button>
+            </div>
+
+            <div class="product-box">
+                <img src="https://images.creativemarket.com/0.1.0/ps/6060971/1820/2730/m1/fpnw/wm1/qcdpmm5cfnlh1124gwnh0i6fmc0xtaa8epavtqaalgnhhxgcdvctqzgoo6yn15vo-.jpg?1552511804&s=4737547c4f3287e4552d1397af26e319" alt="Product Image 1">
+                <div class="description">
+                    <h3>Product 4</h3>
+                    <p>Description of Product 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <button class="buy-now-btn" data-product="Product 4">Buy Now!</button>
+            </div>
+
+            <div class="product-box" id="grey-goose">
+                <img src="https://th.bing.com/th/id/R.9a265e1bde0311a143972c3c560ca6d6?rik=FVQ1zZq5EiQ2uQ&pid=ImgRaw&r=0" alt="Product Image 1">
+                <div class="description">
+                    <h3>Grey Goose & Orange Goose</h3>
+                    <p>Description of Product 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <button class="buy-now-btn" data-product="Grey Goose & Orange Goose">Buy Now!</button>
+            </div>
+
+            <div class="product-box">
+                <img src="https://images.creativemarket.com/0.1.0/ps/6060971/1820/2730/m1/fpnw/wm1/qcdpmm5cfnlh1124gwnh0i6fmc0xtaa8epavtqaalgnhhxgcdvctqzgoo6yn15vo-.jpg?1552511804&s=4737547c4f3287e4552d1397af26e319" alt="Product Image 1">
+                <div class="description">
+                    <h3>Product 1</h3>
+                    <p>Description of Product 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <button class="buy-now-btn" data-product="Product 1">Buy Now!</button>
+            </div>
+    
+            <!-- Add more product boxes as needed -->
+    
+        </div>
+    </div>
+
+ <script>
+    $(document).ready(function(){
+        // Define the click sound element
+        var clickSound = $("#clickSound")[0];
+
+        // Attach a click event to the Buy Now! buttons
+        $(".product-box button").click(function(){
+            // Play the click sound
+            clickSound.play();
+
+            // Get the product name from the description
+            var productName = $(this).siblings(".description").children("h3").text();
+
+            // Retrieve the existing cart items from localStorage or initialize an empty array
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Add the selected product to the cartItems array
+            cartItems.push(productName);
+
+            // Save the updated cartItems array back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            // Alert the user that the product has been added to the cart
+            alert("Product added to cart: " + productName);
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
