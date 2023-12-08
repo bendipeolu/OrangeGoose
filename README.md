@@ -1,4 +1,4 @@
-Orange Goose Juice Website
+<h1>Orange Goose Juice Website</h1>
 Welcome to the Orange Goose Juice Website repository! This project showcases the website for Orange Goose Juice, a fictional brand offering refreshing and imaginative orange-flavored beverages.
 
 Table of Contents
